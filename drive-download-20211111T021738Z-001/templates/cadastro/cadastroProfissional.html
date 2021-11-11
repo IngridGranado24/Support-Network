@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Suport network -- Cadastro profissional</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../Styles/estiloGeral.css">
+  <style>
+    #formulario{
+      width: 700px;
+     margin-left: 25%;
+     margin-right:50%;
+     margin-top: 20PX;
+     border: none;
+    }
+    #nome {
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#apelido {
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#email{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#nome {
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#senha{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#cpf{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#data{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+  </style>
+</head>
+<body>
+  <br>
+  <div class="borda"style="text-align: center;" ><h1>Cadastro profissional </h1></div>
+  <br>
+   <form method ="post" name="formulario" id="formula" >
+     <div id="formulario" >
+     <label for="nome" id="cadastro" name="nome" >Nome</label>
+      <input type="text" id="nome"  placeholder="digite seu Nome aqui">
+      <br><br>
+
+      <label for="apelido" id="cadastro" name="apelido">Apelido</label>
+      <input type="text" id="apelido" 
+      placeholder="digite seu Apelido aqui">
+      <br><br>
+
+      <label for="email" id="cadastro"name="email">Email</label>
+      <input type="email" id="email"  placeholder="teste@email.com.br">
+      <br><br>
+
+       <label for="senha"id="cadastro"name="senha"> Senha</label>
+      <input type="password" id="senha"  placeholder="digite sua senha aqui">
+      <br><br>
+
+
+      <label for="cpf" id="cadastro"name="crm">CRM</label> 
+      <input type="cpf" id="cpf"  placeholder="000.000.000-00">
+      <br><br>
+
+      <label for="data"id="cadastro"name="data">Data de nascimento</label>
+      <input type="date" id="data" >
+      <br><br>
+
+      <label for="nome" id="cadastro"name="area">Área em que atua:</label>
+      <input type="text" id="nome"  placeholder="Ex: Psicologia">
+      <br><br>
+
+       <label for="sexo" id="cadastro"name="sexo">Sexo (opcional)</label>
+      <label><input type="radio" id="sexo" > Feminino </label>
+      <br>
+      <label><input type="radio" id="sexo2" > Masculino </label>
+      <br>
+      <label><input type="radio" id="sexo3" > Outros </label>
+      
+      <br><br>
+      <label for="nome" id="cadastro"name="area">Anexe seu CRM aqui:</label>
+      <input type="file" name="arquivos" multiple id="cadastro">
+      <br><br>
+
+
+    </form>
+      <input type="submit" value="enviar" id="enviar" onclick="validar()"> 
+ </div>
+   </form>
+ <script type="text/javascript">
+  function validar(argument) {
+  // body...
+    var nome = document.getElementById(
+    "nome")
+    var apelido =document.getElementById(
+    "apelido")
+    var email =document.getElementById(
+    "email")
+    var senha =document.getElementById(
+    "senha")
+    var crm =document.getElementById(
+    "crm")
+    var data =document.getElementById(
+    "data")
+    var area =document.getElementById(
+    "area")
+    var sexo =document.getElementById(
+    "sexo")
+     ;
+
+  // verificar se estão vazias
+  if (nome.value =="") {
+    alert("nome não informado!")
+    nome.focus();
+  }
+  // deixa o input com focus
+  if (apelido.value == "") {
+    alert("Sobrenome não informado");
+    apelido.focus();
+    
+  }
+  if (email.value == "") {
+    alert("E-mail não informado");
+    email.focus();
+    
+  }
+  if (senha.value == "") {
+    alert("Senha não informada");
+    senha.focus();
+    
+  }
+  if (crm.value == "") {
+    alert("CRM não informado");
+    crm.focus();
+    
+  }
+  if (data.value == "") {
+    alert("data não informado");
+    data.focus();
+    
+  }
+  if (area.value == "") {
+    alert("area não informado");
+    area.focus();
+    
+  }
+  if (sexo.value == "") {
+    alert("sexo não informado");
+    sexo.focus();
+    return;
+  }
+  alert("Formulário enviado!");
+}
+</script>
+<script type="text/javascript">
+   //envia o formulário
+  formulario.submit();
+
+   function msg() {
+  alert("Cadastro efetuado!");
+}
+</script>
+
+
+</body>
+</html>

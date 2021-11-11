@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Suport network</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../../Styles/estiloGeral.css">
+<style>
+#areaprincipal_infantil{
+  width: 650px;
+  margin-left: 30%;
+  margin-top: 110px;
+  z-index: 1000;
+  background-color: #ffff;
+  border-radius: 3%;
+}
+#botaoques{
+  margin-left: 43%;
+}
+h4{
+text-align: center;
+
+}
+.menu2 {
+     padding: 25px 0;
+     float: right;
+ }
+ #resposta{
+  margin-left: 10%; 
+  width: 80%;
+  height: 2%;
+ }
+</style>
+</head>
+
+<body id="principal" background="pngtree-hand-painted-childlike-childrens-background-paintedsnailsringplantbaby-image_85189.jpg" style=" background-repeat:repeat;">
+
+  <div id="navegaçao" style="background-color:#CEF6CE">
+  <div id="area"> </div>
+   <a href="homeinfat.html" id="link_logo"><img src="../../img/logoTCC.png" class="media-object  img-responsive img-thumbnail" id="logo"></a> 
+
+   
+   <div class="menu2">  
+    <a href="perfil_infantil.html" style="color:black;" > Perfil | </a>
+    <a href="atendimento.html" style="color:#1C1C1C;" > Atendimento | </a>
+    <a href="contato.html " style="color:#1C1C1C;" > Contato | </a>
+    <a href="index.html " style="color:#1C1C1C;" > Agenda | </a>
+    <a href="index.html " style="color:#1C1C1C;"> Historico | </a>
+    <a href="index.html " style="color:#1C1C1C;" > Duvidas </a>
+  </div>
+   
+   
+</div>
+<div id="areaprincipal_infantil">
+ <div id="iniciotext_infantil">
+  <br>
+   <h4 id="campo">Qual tipo de disartria?</h4>
+   <input type="text" id="resposta" >
+   <br><br>
+    <h4>A criança faz algum tratamento?</h4>
+    <input type="text" id="resposta" >
+      <br><br>
+    <h4>Há quanto tempo faz tratamento?</h4>
+    <input type="text" id="resposta" >
+      <br><br>
+    <h4> Quando você descubriu o diagnostico?</h4>
+    <input type="text" id="resposta" >
+    <br><br>
+    <h4> A criança ja fez algum exame perceptual?(Bender, blocos logicos, frosting)</h4>
+    <input type="text" id="resposta" >
+    <br><br>
+    <h4> A criança ja fez algum teste fonetico/fonologico?</h4>
+    <input type="text" id="resposta">
+    <br><br>
+    <h4> A criança ja fez algum exame psicomotor?(PIC, VAYER, OZEREVISKY)</h4>
+    <input type="text" id="resposta" >
+    <br><br>
+    <h4> A criança ja fez prova de discriminação auditiva?(WEEPMAN, TEST BOSTON)</h4>
+    <input type="text" id="resposta" >
+    <br><br>
+    <h4> A criança ja fez alguma cirurgia?</h4>
+    <input type="text" id="resposta" >
+    <br><br>
+    <h4> Faz o uso de algum medicamento? se sim qual/quais?</h4>
+    <input type="text" id="resposta" >
+    <br><br>
+    
+    <form method="get" action="perfil_infantil.html">
+    <input type="submit" value="enviar" id="botaoques" onclick="msg()"> 
+  </div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+
+   function msg() {
+  alert("Questionario enviado!");
+}
+ </script>
+   
+ 
+
+
+</html>

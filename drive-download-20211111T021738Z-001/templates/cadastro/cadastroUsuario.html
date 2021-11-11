@@ -1,0 +1,173 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Suport network -- cadastro usuario cliente</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../../Styles/estiloGeral.css">
+  <style>
+    #formulario{
+      width: 700px;
+     margin-left: 25%;
+     margin-right:50%;
+     margin-top: 20PX;
+     border: none;
+    }
+    #nome {
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#apelido {
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#email{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#nome {
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#senha{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#cpf{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+#data{
+    margin-left: 45%;
+    width: 30%;
+    height: 2%;
+}
+
+  </style>
+</head>
+<body>
+	<br>
+  <div class="borda" style="text-align: center;"><h1>Cadastro Paciente </h1></div>
+  <br>
+   <form id="cadastro_teste" action="../topMenu/questionario.html">
+     <div id="formulario">
+     <label for="nome" id="cadastro">Nome</label>
+      <input type="text" id="nome" required placeholder="digite seu Nome aqui">
+      <br><br>
+
+      <label for="apelido" id="cadastro">Apelido</label>
+      <input type="text" id="apelido" required
+      placeholder="digite seu username aqui">
+      <br><br>
+
+      <label for="email" id="cadastro">Email</label>
+      <input type="email" id="email" required placeholder="teste@email.com.br">
+      <br><br>
+
+       <label for="senha"id="cadastro"> Senha</label>
+      <input type="password" id="senha" required placeholder="digite sua senha aqui">
+      <br><br>
+
+
+      <label for="cpf" id="cadastro">CPF</label> 
+      <input type="cpf" id="cpf" required placeholder="***.***.***-**">
+      <br><br>
+
+      <label for="data"id="cadastro">Data de nascimento</label>
+      <input type="date" id="data" requiered>
+      <br><br>
+
+       <label for="sexo" id="cadastro">Sexo</label>
+      <label><input type="radio" id="sexo" required> Feminino </label>
+      <br>
+      <label><input type="radio" id="sexo2" required> Masculino </label>
+      <br>
+      <label><input type="radio" id="sexo3" required> Outros </label>
+      
+      <br><br>
+      <label for="nome" id="cadastro"name="area">Anexe seu RG:</label>
+      <input type="file" name="arquivos" multiple id="cadastro">
+      <br><br>
+
+      <input type="submit" value="enviar" id="enviar" onclick="confirmar()"> 
+ </div>
+   </form>
+   <script src="javascripts/jquery.js" type="text/javascript"></script>
+   <script type="text/javascript">
+   $(document).ready(function() {
+   var largura = $(window).width(); /* Vê a tela do usuario */
+   if (largura <= 921) {
+   /* Se a Largura do monitor for menor ou = que 921 px */
+   $("#hire").hide(); /* Esconde a bandeira azul*/
+   $("#resize").hide(); /* Esconde "triangulo" resize no canto inferior direito*/
+   }
+   else if (tam >= 922) {
+   /* Se não for a condição a cima e for marior ou = a 922 px */
+   $("#hire").show(); /* Mostra a bandeira azul*/
+   $("#resize").show(); /* Mostra "triangulo" resize no canto inferior direito*/
+   }
+});
+</script>
+<script>
+  function cadastraDados() {
+  //document.querySelector('#hdnCadastro').value = 1;
+  document.querySelector('#cadastro_teste').submit();
+  }
+  //Função para preencher todos campos
+  function confirmar() {
+      let form = document.querySelector('#cadastro_teste');
+      let msg = new String();
+      let erro = false;
+
+      msg = '==== Para prosseguir, preencha os seguintes campos==== \n\n';
+
+      if (form.nome.value == '') {
+          msg = msg + '- Nome\n';
+          erro = true
+      }
+
+      if (form.apelido.value == '') {
+          msg = msg + '- Apelido \n';
+          erro = true
+      }
+      if (form.email.value == '') {
+          msg = msg + '- Email \n';
+          erro = true
+      }
+      if (form.senha.value == '') {
+          msg = msg + '- Senha \n';
+          erro = true
+      }
+      if (form.cpf.value == '') {
+          msg = msg + '- CPF \n';
+          erro = true
+      }
+      if (form.data.value == '') {
+          msg = msg + '- Data Nascimento \n';
+          erro = true
+      }
+      if (form.sexo.value == '') {
+          msg = msg + '- Sexo \n';
+          erro = true
+      }
+      if (form.cadastro.value == '') {
+          msg = msg + '- Anexe um arquivo\n';
+          erro = true
+      }
+      if (erro) {
+          alert(msg);
+      } else {
+          cadastraDados()
+              /* limpaCampo() */
+          window.location.href
+      }
+
+  }
+</script>
+</body>
+</html>

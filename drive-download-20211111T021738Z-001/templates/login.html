@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../Styles/estiloGeral.css">
+</head>
+
+<body>
+    <form name="formLogin" id="formLogin" method="get" action="topMenu/suport_network.html">
+        <div class="container">
+            <img src="../img/telaLogin.jpg" id="back">
+            <div class="box2" style="position:absolute !important;z-index:999 !important;">
+                <p id="p2">Login</p>
+                <label for="login"> <p id="login1"> Username:</label>
+                <input type="text" name="txtLogin" id="txtLogin">
+                <br>
+
+                <label for="senha"> <p id="senha1">Senha:</label>
+                <input type="text" name="txtSenha" id="txtSenha">
+    
+                <br>
+                </form>
+                <br>
+                    <input type="button" value="enviar" id="botao2" onclick="confirmar()">
+                    <br>
+                    <div name="linkRedirecionamento" id="linkRedirecionamento" style="text-align: center;">
+                    <a href="" id="direitos">Esqueci minha Senha</a>
+                    <a href="cadastro/cadastroUsuario.html">Cadastro Paciente</a><br>
+                    <a href="cadastro/cadastroProfissional.html">Cadastro Profissional</a>
+                    </div>
+                    <br>
+                    <br>
+                    <h6 id="direitos"> Todos os direitos reservados </h6>
+
+            </div>
+        </div>
+</body>
+<script>
+    function cadastraDados() {
+    //document.querySelector('#hdnCadastro').value = 1;
+    document.querySelector('#formLogin').submit();
+    }
+    //Função para preencher todos campos
+    function confirmar() {
+        let form = document.querySelector('#formLogin');
+        let msg = new String();
+        let erro = false;
+
+        msg = '==== Para prosseguir, preencha os seguintes campos==== \n\n';
+
+        if (form.txtLogin.value == '') {
+            msg = msg + '- Apelido \n';
+            erro = true
+        }
+
+        if (form.txtSenha.value == '') {
+            msg = msg + '- Senha \n';
+            erro = true
+        }
+        if (erro) {
+            alert(msg);
+        } else {
+            cadastraDados()
+                /* limpaCampo() */
+        }
+
+    }
+</script>
+</html>
